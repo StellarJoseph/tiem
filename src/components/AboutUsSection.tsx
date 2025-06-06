@@ -16,28 +16,63 @@ const AboutUsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Who We Are</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+                <span className="text-primary">🏢</span>
+                Who We Are
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
                 TIEM Energy is a leading solar solutions provider dedicated to delivering clean, affordable, and reliable energy across Nigeria. With years of experience, we design and install customized solar systems tailored to meet diverse energy needs.
               </p>
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Who We Serve</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+                <span className="text-primary">👥</span>
+                Who We Serve
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                We serve homeowners, businesses, schools, and communities seeking to reduce energy costs and embrace sustainable power solutions throughout urban and remote areas of Nigeria.
+                We proudly serve homeowners, businesses, schools, and communities looking to reduce energy costs and embrace sustainable power solutions in both urban and remote areas of Nigeria.
               </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+                <span className="text-primary">⭐</span>
+                Benefits of Patronizing Us
+              </h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">✓</span>
+                  High-quality, durable solar products guaranteed to perform in Nigerian conditions
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">✓</span>
+                  Personalized solar solutions to match your energy needs
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">✓</span>
+                  Professional installation & dependable after-sales support
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">✓</span>
+                  Competitive pricing with no compromise on service
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-1">✓</span>
+                  Trusted by hundreds of customers across Nigeria
+                </li>
+              </ul>
             </div>
           </div>
 
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&h=400&fit=crop"
-              alt="TIEM Energy solar installation"
-              className="rounded-lg shadow-lg w-full h-80 object-cover"
-            />
+            <div className="bg-muted rounded-lg p-8 h-80 flex items-center justify-center">
+              <p className="text-muted-foreground text-center">
+                [Image Placeholder: Solar Installation Team or Project]
+              </p>
+            </div>
             <div className="absolute inset-0 bg-primary/20 rounded-lg"></div>
           </div>
         </div>

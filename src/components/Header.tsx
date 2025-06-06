@@ -53,9 +53,9 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/6ccd33f8-3195-4b3b-8024-4d0d2f9e4f3a.png" 
+                src="/lovable-uploads/ba0ed9d0-e60e-4e7d-a66d-acfa48de53c8.png" 
                 alt="TIEM Energy Logo" 
-                className="h-10 w-10"
+                className="h-12 w-auto"
               />
             </Link>
           </div>

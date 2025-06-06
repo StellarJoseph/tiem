@@ -27,7 +27,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-accent">TIEM Energy</h3>
+            <img 
+              src="/lovable-uploads/ba0ed9d0-e60e-4e7d-a66d-acfa48de53c8.png" 
+              alt="TIEM Energy Logo" 
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-background/80">
               Leading provider of high-quality solar energy solutions across Nigeria. Empowering homes and businesses with reliable, affordable solar power.
             </p>
