@@ -20,8 +20,8 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Improve Your Living with 
-            <span className="block text-accent">Reliable Solar Energy</span>
-            Solutions
+            <span className="block text-accent">Reliable and Uninterrupted</span>
+            Solar Energy Solutions
           </h1>
           
           <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -40,9 +40,11 @@ const HeroSection = () => {
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-3 text-lg"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              asChild
             >
-              Speak to a Consultant
+              <a href="https://wa.link/k395rj" target="_blank" rel="noopener noreferrer">
+                Get Solar Quote
+              </a>
             </Button>
           </div>
 

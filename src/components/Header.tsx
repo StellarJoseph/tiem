@@ -1,39 +1,62 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ShoppingCart, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [cartItems, setCartItems] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigationItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Products', href: '#products' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'The TIEM Experience', href: '/experience' },
+    { name: 'Services', href: '/services' },
+    { name: 'Products', href: '/products' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'Store', href: '/store' },
+    { name: 'Blog', href: '/blog' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+    <header className={`sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border transition-all duration-300 ${isScrolled ? 'bg-accent' : 'bg-background/95'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">TIEM Energy</h1>
+            <Link to="/" className="flex items-center gap-3">
+              <img 
+                src="/lovable-uploads/6ccd33f8-3195-4b3b-8024-4d0d2f9e4f3a.png" 
+                alt="TIEM Energy Logo" 
+                className="h-10 w-10"
+              />
+              <h1 className="text-2xl font-bold text-primary">TIEM Energy</h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navigationItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                to={item.href}
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-sm"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -52,17 +75,21 @@ const Header = () => {
               )}
             </Button>
 
-            <div className="hidden lg:flex items-center space-x-2 text-sm">
-              <span className="text-muted-foreground">Call:</span>
-              <a href="tel:+2348063840230" className="text-primary font-medium hover:underline">
-                +234 806 384 0230
+            <div className="hidden xl:flex items-center">
+              <a
+                href="https://wa.link/k395rj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors text-sm"
+              >
+                Get Solar Quote
               </a>
             </div>
 
             {/* Mobile menu */}
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="md:hidden">
+                <Button variant="ghost" size="sm" className="lg:hidden">
                   <div className="w-4 h-4 flex flex-col justify-center space-y-1">
                     <div className="w-full h-0.5 bg-current"></div>
                     <div className="w-full h-0.5 bg-current"></div>
@@ -73,24 +100,34 @@ const Header = () => {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navigationItems.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="text-lg font-medium text-foreground hover:text-primary transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                   <div className="pt-4 border-t">
-                    <p className="text-sm text-muted-foreground mb-2">Contact us:</p>
-                    <a href="tel:+2348063840230" className="text-primary font-medium">
-                      +234 806 384 0230
+                    <a
+                      href="https://wa.link/k395rj"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors inline-block text-center w-full"
+                    >
+                      Get Solar Quote
                     </a>
-                    <br />
-                    <a href="tel:+2348165539671" className="text-primary font-medium">
-                      +234 816 553 9671
-                    </a>
+                    <div className="mt-4">
+                      <p className="text-sm text-muted-foreground mb-2">Contact us:</p>
+                      <a href="tel:+2348063840230" className="text-primary font-medium">
+                        +234 806 384 0230
+                      </a>
+                      <br />
+                      <a href="tel:+2348165539671" className="text-primary font-medium">
+                        +234 816 553 9671
+                      </a>
+                    </div>
                   </div>
                 </nav>
               </SheetContent>
