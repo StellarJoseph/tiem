@@ -2,8 +2,16 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { ShoppingCart, Search } from 'lucide-react';
+import { ShoppingCart, Search, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [cartItems, setCartItems] = useState(0);
@@ -21,8 +29,14 @@ const Header = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'The TIEM Experience', href: '/experience' },
+    { 
+      name: 'About Us', 
+      href: '/about',
+      submenu: [
+        { name: 'About Us', href: '/about' },
+        { name: 'The TIEM Experience', href: '/experience' }
+      ]
+    },
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
     { name: 'Gallery', href: '/gallery' },
@@ -37,28 +51,54 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/6ccd33f8-3195-4b3b-8024-4d0d2f9e4f3a.png" 
                 alt="TIEM Energy Logo" 
                 className="h-10 w-10"
               />
-              <h1 className="text-2xl font-bold text-primary">TIEM Energy</h1>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-sm"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList className="space-x-6">
+              {navigationItems.map((item) => (
+                <NavigationMenuItem key={item.name}>
+                  {item.submenu ? (
+                    <>
+                      <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-sm bg-transparent">
+                        {item.name}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="w-48 p-2">
+                          {item.submenu.map((subItem) => (
+                            <NavigationMenuLink key={subItem.name} asChild>
+                              <Link
+                                to={subItem.href}
+                                className="block px-3 py-2 text-sm text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
+                              >
+                                {subItem.name}
+                              </Link>
+                            </NavigationMenuLink>
+                          ))}
+                        </div>
+                      </NavigationMenuContent>
+                    </>
+                  ) : (
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to={item.href}
+                        className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-sm"
+                      >
+                        {item.name}
+                      </Link>
+                    </NavigationMenuLink>
+                  )}
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
@@ -100,14 +140,29 @@ const Header = () => {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navigationItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
+                    <div key={item.name}>
+                      <Link
+                        to={item.href}
+                        className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      {item.submenu && (
+                        <div className="ml-4 mt-2 space-y-2">
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                   <div className="pt-4 border-t">
                     <a

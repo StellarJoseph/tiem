@@ -5,34 +5,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const BenefitsSection = () => {
   const benefits = [
     {
-      title: 'High-Quality, Durable Products',
-      description: 'Solar products guaranteed to perform excellently in Nigerian conditions with proven durability and efficiency',
+      title: 'Optimized for Nigerian Climate',
+      description: 'Our solar solutions are engineered to withstand Nigeria\'s unique weather patterns, ensuring maximum efficiency year-round.',
+      icon: '🌞',
+    },
+    {
+      title: 'Cutting-Edge Technology Integration',
+      description: 'We utilize the latest solar inverter technologies and smart energy management systems for optimal power output and monitoring.',
       icon: '⚡',
     },
     {
-      title: 'Personalized Solar Solutions',
-      description: 'Custom-designed solar systems tailored to your specific energy requirements and budget constraints',
-      icon: '🎯',
-    },
-    {
-      title: 'Professional Installation & Support',
-      description: 'Expert installation by certified technicians with dedicated after-sales support and maintenance services',
-      icon: '🔧',
-    },
-    {
-      title: 'Competitive Pricing',
-      description: 'Affordable pricing without compromising on quality or service, making solar energy accessible to all',
-      icon: '💰',
-    },
-    {
-      title: 'Trusted by Hundreds',
-      description: 'Proven track record with hundreds of satisfied customers nationwide who trust our expertise',
-      icon: '👥',
-    },
-    {
-      title: 'Nigerian Expertise',
-      description: 'Local expertise understanding Nigerian power challenges with solutions designed for our unique environment',
-      icon: '🇳🇬',
+      title: 'End-to-End Project Management',
+      description: 'From initial consultation to final installation and ongoing maintenance, we manage every step seamlessly to ensure your satisfaction.',
+      icon: '🛠️',
     },
   ];
 
@@ -48,7 +33,7 @@ const BenefitsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2 hover:border-primary/20">
               <CardHeader className="text-center">
