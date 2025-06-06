@@ -61,7 +61,7 @@ const USPSection = () => {
             Get a free consultation and customized quote for your home or business. Our experts will design the perfect solar solution for your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+2348063840230" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-md font-semibold hover:bg-primary/90 transition-colors">📞 Speak to an Engineer</a>
+            <a href="tel:+2348063840230" className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-md font-semibold hover:bg-primary/90 transition-colors">📞  Speak to an Engineer</a>
             <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground rounded-md font-semibold hover:bg-accent/90 transition-colors">
               💬 WhatsApp Us
             </a>
