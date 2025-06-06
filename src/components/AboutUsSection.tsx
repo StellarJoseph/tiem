@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const AboutUsSection = () => {
-  return (
-    <section className="py-20 bg-background">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
@@ -73,7 +70,7 @@ const AboutUsSection = () => {
                 [Image Placeholder: Solar Installation Team or Project]
               </p>
             </div>
-            <div className="absolute inset-0 bg-primary/20 rounded-lg"></div>
+            
           </div>
         </div>
 
@@ -109,8 +106,6 @@ const AboutUsSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUsSection;
