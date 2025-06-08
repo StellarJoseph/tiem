@@ -152,9 +152,7 @@ const ContactSection = () => {
             <Card className="bg-primary/10">
               <CardContent className="p-6">
                 <h4 className="font-semibold text-foreground mb-3">Quick Response Guarantee</h4>
-                <p className="text-muted-foreground mb-4">
-                  We respond to all inquiries within 2 hours during business hours and provide free consultations for all potential customers.
-                </p>
+                <p className="text-muted-foreground mb-4">We respond to all inquiries within minutes during business hours and provide free consultations for all potential customers.</p>
                 <div className="flex gap-3">
                   <Button size="sm" asChild>
                     <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer">💬 WhatsApp Now</a>
