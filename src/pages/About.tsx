@@ -100,54 +100,66 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="border-2 hover:border-primary/20 transition-all h-full">
                 <CardContent className="pt-6">
-                  <h4 className="text-xl font-bold text-foreground mb-3">Sustainability</h4>
+                  <h4 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🌱</span> Sustainability
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    We champion renewable energy as a cleaner, future-forward power source for Nigerian homes and businesses.
+                    Committed to clean, renewable energy that protects the environment and secures a better future for all.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 hover:border-primary/20 transition-all h-full">
                 <CardContent className="pt-6">
-                  <h4 className="text-xl font-bold text-foreground mb-3">Innovation</h4>
+                  <h4 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🚀</span> Innovation
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    We continuously explore and apply the latest solar technologies to deliver advanced energy solutions.
+                    Leveraging cutting-edge solar tech and evolving strategies to deliver efficient and modern energy solutions.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 hover:border-primary/20 transition-all h-full">
                 <CardContent className="pt-6">
-                  <h4 className="text-xl font-bold text-foreground mb-3">Customer Satisfaction</h4>
+                  <h4 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+                    <span className="text-2xl">😊</span> Customer Satisfaction
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    Every project is guided by our commitment to exceed client expectations with excellent service and results.
+                    Our top priority is delighting customers through personalized service, top-tier equipment, and full post-installation support.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 hover:border-primary/20 transition-all h-full">
                 <CardContent className="pt-6">
-                  <h4 className="text-xl font-bold text-foreground mb-3">Integrity</h4>
+                  <h4 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🤝</span> Integrity
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    We believe in honesty and transparency in pricing, communication, and all customer relationships.
+                    Honest recommendations, transparent pricing, and unwavering reliability in everything we do.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 hover:border-primary/20 transition-all h-full">
                 <CardContent className="pt-6">
-                  <h4 className="text-xl font-bold text-foreground mb-3">Excellence</h4>
+                  <h4 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🏆</span> Excellence
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    Our installations and service delivery are carried out with precision, care, and top-tier quality standards.
+                    Every project meets high professional standards—built to perform, last, and impress.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 hover:border-primary/20 transition-all h-full">
                 <CardContent className="pt-6">
-                  <h4 className="text-xl font-bold text-foreground mb-3">Accountability</h4>
+                  <h4 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+                    <span className="text-2xl">🔄</span> Accountability
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    We take full responsibility for the systems we deliver, offering post-installation support and guidance.
+                    We stand by our work. With responsive maintenance and real-time system tracking, you're never left in the dark.
                   </p>
                 </CardContent>
               </Card>
@@ -159,61 +171,88 @@ const About = () => {
       {/* Strategic Business Info */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-2 border-l-4 border-primary pl-4">
-                Strategic Business Info
-              </h2>
-              <div className="h-1 w-24 bg-accent ml-4"></div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Strategic Business Overview</h2>
+              <div className="h-1 w-24 bg-primary mx-auto"></div>
             </div>
             
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">5-Year Goal</h3>
-                <p className="text-muted-foreground">Expand to 5 Nigerian states, power 50,000+ sites, reduce grid dependency by 10%.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {/* 5-Year Strategic Plan */}
+              <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-lg">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
+                    <span className="text-2xl">🗺️</span> 5-Year Strategic Plan
+                  </h3>
+                  <div className="h-1 w-24 bg-primary"></div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Bold goals to position TIEM ENERGY as Nigeria's leading clean-energy solution provider.
+                </p>
+                <div className="space-y-2">
+                  <p className="text-foreground font-semibold">Goal Highlights:</p>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex items-center gap-2"><span className="text-primary">•</span> Expand to 5 Nigerian states</li>
+                    <li className="flex items-center gap-2"><span className="text-primary">•</span> Power 50,000+ homes and businesses</li>
+                    <li className="flex items-center gap-2"><span className="text-primary">•</span> Help reduce national grid dependency by 10%</li>
+                  </ul>
+                </div>
               </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Target Audience</h3>
-                <p className="text-muted-foreground">Ages 25–60, homeowners, SMEs, corporates, NGOs.</p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">USP</h3>
-                <p className="text-muted-foreground">Tailored solar inverter systems with expert installation & support.</p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Advantages</h3>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-muted-foreground">
-                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Skilled team</li>
-                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Budget-flexible packages</li>
-                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Transparent pricing</li>
-                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Nationwide support</li>
-                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Long-lasting components</li>
-                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Emphasis on education</li>
+
+              {/* Target Audience */}
+              <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-8 rounded-lg">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
+                    <span className="text-2xl">👥</span> Target Audience
+                  </h3>
+                  <div className="h-1 w-24 bg-primary"></div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Our solar energy solutions are designed for:
+                </p>
+                <ul className="space-y-1 text-muted-foreground">
+                  <li className="flex items-center gap-2"><span className="text-primary">•</span> Ages 25–60</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">•</span> Homeowners in urban and rural areas</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">•</span> Small and Medium Enterprises (SMEs)</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">•</span> Corporate businesses</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">•</span> NGOs and Institutions across Nigeria</li>
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Get in Touch */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Get in Touch</h2>
-            <p className="text-muted-foreground mb-8">
-              Have questions about our solar solutions? We're here to help you make the switch to clean energy.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <a href="tel:+2348063840230">📞 Call Now</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
-              </Button>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* USP */}
+              <div className="bg-muted/30 p-8 rounded-lg">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
+                    <span className="text-2xl">💡</span> Unique Selling Proposition (USP)
+                  </h3>
+                  <div className="h-1 w-24 bg-primary"></div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  We provide tailored solar inverter systems backed by expert consultation, professional installation, and continuous support.
+                </p>
+              </div>
+
+              {/* Key Advantages */}
+              <div className="bg-muted/30 p-8 rounded-lg">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
+                    <span className="text-2xl">🛠</span> Key Advantages
+                  </h3>
+                  <div className="h-1 w-24 bg-primary"></div>
+                </div>
+                <p className="text-muted-foreground mb-4 font-semibold">
+                  Why Nigerians trust TIEM ENERGY:
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-center gap-2"><span className="text-primary">✅</span> Skilled technical & engineering team</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✅</span> Flexible packages to suit every budget</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✅</span> Transparent, honest pricing</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✅</span> Nationwide delivery & support</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✅</span> Durable, long-lasting system components</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
