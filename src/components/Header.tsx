@@ -39,9 +39,7 @@ const Header = () => {
     },
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Store', href: '/store' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Blog', href: '/blog' },
   ];
 
@@ -102,19 +100,6 @@ const Header = () => {
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="hidden sm:flex">
-              <Search className="h-4 w-4" />
-            </Button>
-            
-            <Button variant="ghost" size="sm" className="relative">
-              <ShoppingCart className="h-4 w-4" />
-              {cartItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {cartItems}
-                </span>
-              )}
-            </Button>
-
             <div className="hidden xl:flex items-center">
               <a
                 href="https://wa.link/k395rj"

@@ -1,7 +1,10 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+
 const AboutUsSection = () => {
-  return <section className="py-20 bg-background">
+  return (
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
@@ -12,7 +15,7 @@ const AboutUsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center mb-16">
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
@@ -63,15 +66,6 @@ const AboutUsSection = () => {
               </ul>
             </div>
           </div>
-
-          <div className="relative">
-            <div className="bg-muted rounded-lg p-8 h-80 flex items-center justify-center">
-              <p className="text-muted-foreground text-center">
-                [Image Placeholder: Solar Installation Team or Project]
-              </p>
-            </div>
-            
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -106,6 +100,8 @@ const AboutUsSection = () => {
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutUsSection;

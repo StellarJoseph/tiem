@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const About = () => {
   const coreValues = [
@@ -14,7 +15,7 @@ const About = () => {
     {
       title: 'Innovation',
       description: 'We deliver cutting-edge, efficient solar technologies.',
-      icon: '💡',
+      icon: '🚀',
     },
     {
       title: 'Customer Satisfaction',
@@ -29,7 +30,12 @@ const About = () => {
     {
       title: 'Excellence',
       description: 'We strive for high performance in all aspects of our operations.',
-      icon: '⭐',
+      icon: '🏆',
+    },
+    {
+      title: 'Accountability',
+      description: 'We take responsibility for our actions and deliver on our promises.',
+      icon: '🔄',
     },
   ];
 
@@ -47,59 +53,60 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Overview */}
+      {/* WHO WE ARE */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                About TIEM ENERGY
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                At TIEM ENERGY, we are committed to delivering reliable, cost-effective, and sustainable solar energy solutions to homes and businesses across Nigeria. Our mission is to reduce dependency on unstable power grids and empower individuals and businesses with efficient, long-lasting solar inverter systems.
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+              ✅ WHO WE ARE
+            </h2>
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-primary mb-4">TIEM ENERGY</h3>
+              <p className="text-lg text-muted-foreground mb-4">Slogan: Empowering a sustainable future</p>
+              <p className="text-muted-foreground leading-relaxed">
+                At TIEM ENERGY, we're committed to delivering reliable, cost-effective solar energy solutions to homes and businesses across Nigeria. From seamless installations to expert support, we make the switch to solar effortless and rewarding.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&h=400&fit=crop"
-                  alt="Solar installation"
-                  className="rounded-lg shadow-lg w-full h-80 object-cover"
-                />
-              </div>
-              <div className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  We offer a range of high-quality solar inverters tailored to meet diverse energy needs. With a focus on innovation and customer satisfaction, our expert team ensures seamless installation, top-notch maintenance, and dedicated customer support, making your switch to solar energy effortless and rewarding.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* OUR STORY */}
       <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+              🛠 OUR STORY
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Founded to solve Nigeria's unstable power problem. What began as a personal frustration evolved into a national mission to power homes and businesses sustainably and affordably.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <Card className="p-8">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary mb-4">Our Mission</CardTitle>
+                <CardTitle className="text-2xl font-bold text-primary mb-4">🎯 MISSION</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To reduce dependency on unstable power grids and empower individuals and businesses with efficient, long-lasting solar inverter systems.
+                  Reduce dependency on unstable power grids by delivering long-lasting solar inverter systems.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="p-8">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary mb-4">Our Vision</CardTitle>
+                <CardTitle className="text-2xl font-bold text-primary mb-4">👁️‍🗨️ VISION</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To become Nigeria's most trusted provider of sustainable and cost-effective solar energy solutions, empowering communities and businesses with uninterrupted power and environmental responsibility.
+                  To be Nigeria's most trusted solar provider, enabling reliable, clean power for all.
                 </p>
               </CardContent>
             </Card>
@@ -108,15 +115,12 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Our Core Values
+              💡 CORE VALUES
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide everything we do at TIEM Energy
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -139,6 +143,52 @@ const About = () => {
         </div>
       </section>
 
+      {/* Strategic Business Info */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              📊 STRATEGIC BUSINESS INFO
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            <Card className="p-6">
+              <h3 className="text-xl font-bold text-primary mb-4">5-Year Goal</h3>
+              <p className="text-muted-foreground">
+                Expand to 5 Nigerian states, power 50,000+ sites, reduce grid dependency by 10%.
+              </p>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className="text-xl font-bold text-primary mb-4">Target Audience</h3>
+              <p className="text-muted-foreground">
+                Ages 25–60, homeowners, SMEs, corporates, NGOs.
+              </p>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className="text-xl font-bold text-primary mb-4">USP</h3>
+              <p className="text-muted-foreground">
+                Tailored solar inverter systems with expert installation & support.
+              </p>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className="text-xl font-bold text-primary mb-4">Advantages</h3>
+              <ul className="text-muted-foreground space-y-2">
+                <li>• Skilled team</li>
+                <li>• Budget-flexible packages</li>
+                <li>• Transparent pricing</li>
+                <li>• Nationwide support</li>
+                <li>• Long-lasting components</li>
+                <li>• Emphasis on education</li>
+              </ul>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,9 +196,6 @@ const About = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Meet Our Team
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Led by experienced professionals dedicated to solar energy excellence
-            </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -167,9 +214,6 @@ const About = () => {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Temiloluwa is a seasoned energy professional with a BSc and MSc in Petroleum Engineering and over 8 years of experience in the energy sector. With a deep passion for clean energy and sustainable development, he founded TIEM ENERGY to provide reliable solar power solutions for Nigerians.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    He leads system design, technical operations, and innovation strategy, ensuring every installation meets international standards and client expectations.
-                  </p>
                   <blockquote className="text-primary italic border-l-4 border-primary pl-4">
                     "At TIEM ENERGY, we're not just installing solar panels — we're building energy independence for Nigerian homes and businesses."
                   </blockquote>
@@ -180,14 +224,18 @@ const About = () => {
         </div>
       </section>
 
-      {/* 5-Year Goal */}
+      {/* Get in Touch & CTA */}
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8">Our 5-Year Vision for Nigeria</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl leading-relaxed">
-              Expand TIEM ENERGY's market presence across all 36 states, power over 50,000 homes and businesses, reduce national grid dependency by at least 10%, empower rural and urban communities with sustainable solar solutions, and promote environmental responsibility and employment opportunities across Nigeria.
-            </p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">✅ Get in Touch</h2>
+          <h3 className="text-2xl font-bold mb-8">Ready to Switch to Solar Energy?</h3>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild>
+              <a href="/products">See Packages</a>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="tel:+2348063840230">Speak to a Consultant</a>
+            </Button>
           </div>
         </div>
       </section>
