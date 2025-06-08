@@ -1,13 +1,10 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-
 const About = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
@@ -230,8 +227,17 @@ const About = () => {
                   <div className="h-1 w-24 bg-primary"></div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  We provide tailored solar inverter systems backed by expert consultation, professional installation, and continuous support.
-                </p>
+
+
+TIEM ENERGY delivers custom solar inverter systems tailored to your unique power needs. We combine:
+
+Expert consultation to assess and plan the right solution
+
+Professional installation using durable, high-performance components
+
+Ongoing support to ensure long-term efficiency and reliability
+
+Whether for homes, businesses, or institutions, we provide reliable, scalable solar systems backed by trusted expertise and full-service care.</p>
               </div>
 
               {/* Key Advantages */}
@@ -281,8 +287,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
