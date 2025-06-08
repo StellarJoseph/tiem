@@ -69,7 +69,7 @@ const AboutUsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+          <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-primary/20">
             <CardContent className="pt-6">
               <div className="text-4xl mb-4">🏠</div>
               <h4 className="text-xl font-bold text-foreground mb-2">Homeowners</h4>
@@ -79,7 +79,7 @@ const AboutUsSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+          <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-primary/20">
             <CardContent className="pt-6">
               <div className="text-4xl mb-4">🏢</div>
               <h4 className="text-xl font-bold text-foreground mb-2">Businesses</h4>
@@ -89,7 +89,7 @@ const AboutUsSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+          <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-primary/20">
             <CardContent className="pt-6">
               <div className="text-4xl mb-4">🏫</div>
               <h4 className="text-xl font-bold text-foreground mb-2">Institutions</h4>

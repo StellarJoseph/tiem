@@ -25,7 +25,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Affordable, Tailored Solar Systems for Homes and Businesses Across Nigeria
+            We Provide Affordable, Tailored Solar Systems for Homes and Businesses Across Nigeria
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -38,30 +38,13 @@ const HeroSection = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-3 text-lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8 py-3 text-lg"
               asChild
             >
               <a href="https://wa.link/k395rj" target="_blank" rel="noopener noreferrer">
                 Get Solar Quote
               </a>
             </Button>
-          </div>
-
-          {/* Contact info */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-white/90">
-            <div className="flex items-center gap-2">
-              <span className="text-sm">📞 Call/WhatsApp:</span>
-              <a href="tel:+2348063840230" className="font-medium hover:text-accent transition-colors">
-                +234 806 384 0230
-              </a>
-            </div>
-            <div className="hidden sm:block">•</div>
-            <div className="flex items-center gap-2">
-              <a href="tel:+2348165539671" className="font-medium hover:text-accent transition-colors">
-                +234 816 553 9671
-              </a>
-            </div>
           </div>
         </div>
 

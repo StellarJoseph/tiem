@@ -6,77 +6,45 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 
 const About = () => {
-  const coreValues = [
-    {
-      title: 'Sustainability',
-      description: 'We prioritize eco-friendly solutions to promote a cleaner future.',
-      icon: '🌱',
-    },
-    {
-      title: 'Innovation',
-      description: 'We deliver cutting-edge, efficient solar technologies.',
-      icon: '🚀',
-    },
-    {
-      title: 'Customer Satisfaction',
-      description: 'We provide seamless service, from consultation to installation and support.',
-      icon: '😊',
-    },
-    {
-      title: 'Integrity',
-      description: 'We uphold transparency, trust, and ethical business practices.',
-      icon: '🤝',
-    },
-    {
-      title: 'Excellence',
-      description: 'We strive for high performance in all aspects of our operations.',
-      icon: '🏆',
-    },
-    {
-      title: 'Accountability',
-      description: 'We take responsibility for our actions and deliver on our promises.',
-      icon: '🔄',
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">About TIEM Energy</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Empowering a sustainable future with reliable solar energy solutions across Nigeria
-          </p>
-        </div>
-      </section>
-
-      {/* WHO WE ARE */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              ✅ WHO WE ARE
-            </h2>
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-primary mb-4">TIEM ENERGY</h3>
-              <p className="text-lg text-muted-foreground mb-4">Slogan: Empowering a sustainable future</p>
-              <p className="text-muted-foreground leading-relaxed">
-                At TIEM ENERGY, we're committed to delivering reliable, cost-effective solar energy solutions to homes and businesses across Nigeria. From seamless installations to expert support, we make the switch to solar effortless and rewarding.
-              </p>
-            </div>
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+              About TIEM Energy
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Empowering a sustainable future with reliable solar energy solutions across Nigeria
+            </p>
           </div>
         </div>
       </section>
 
-      {/* OUR STORY */}
-      <section className="py-20 bg-muted/30">
+      {/* Who We Are */}
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              🛠 OUR STORY
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-6">
+              Who We Are
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              <strong>TIEM ENERGY</strong> - Empowering a sustainable future. At TIEM ENERGY, we're committed to delivering reliable, cost-effective solar energy solutions to homes and businesses across Nigeria. From seamless installations to expert support, we make the switch to solar effortless and rewarding.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+              <span className="text-primary">🛠</span>
+              Our Story
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Founded to solve Nigeria's unstable power problem. What began as a personal frustration evolved into a national mission to power homes and businesses sustainably and affordably.
@@ -86,26 +54,32 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <Card className="p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="border-2 hover:border-primary/20 transition-all">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary mb-4">🎯 MISSION</CardTitle>
+                <CardTitle className="flex items-center gap-3">
+                  <span className="text-primary text-2xl">🎯</span>
+                  Mission
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground">
                   Reduce dependency on unstable power grids by delivering long-lasting solar inverter systems.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="p-8">
+            <Card className="border-2 hover:border-primary/20 transition-all">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-primary mb-4">👁️‍🗨️ VISION</CardTitle>
+                <CardTitle className="flex items-center gap-3">
+                  <span className="text-primary text-2xl">👁️‍🗨️</span>
+                  Vision
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground">
                   To be Nigeria's most trusted solar provider, enabling reliable, clean power for all.
                 </p>
               </CardContent>
@@ -115,127 +89,113 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              💡 CORE VALUES
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
+              <span className="text-primary">💡</span>
+              Core Values
             </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {coreValues.map((value, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="text-4xl mb-4">{value.icon}</div>
-                  <CardTitle className="text-xl font-bold text-foreground">
-                    {value.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {value.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: '🌱', title: 'Sustainability' },
+                { icon: '🚀', title: 'Innovation' },
+                { icon: '😊', title: 'Customer Satisfaction' },
+                { icon: '🤝', title: 'Integrity' },
+                { icon: '🏆', title: 'Excellence' },
+                { icon: '🔄', title: 'Accountability' }
+              ].map((value, index) => (
+                <Card key={index} className="text-center border-2 hover:border-primary/20 transition-all">
+                  <CardContent className="pt-6">
+                    <div className="text-3xl mb-3">{value.icon}</div>
+                    <h4 className="font-semibold text-foreground">{value.title}</h4>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Strategic Business Info */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              📊 STRATEGIC BUSINESS INFO
-            </h2>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-8">
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">5-Year Goal</h3>
-              <p className="text-muted-foreground">
-                Expand to 5 Nigerian states, power 50,000+ sites, reduce grid dependency by 10%.
-              </p>
-            </Card>
-
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">Target Audience</h3>
-              <p className="text-muted-foreground">
-                Ages 25–60, homeowners, SMEs, corporates, NGOs.
-              </p>
-            </Card>
-
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">USP</h3>
-              <p className="text-muted-foreground">
-                Tailored solar inverter systems with expert installation & support.
-              </p>
-            </Card>
-
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">Advantages</h3>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Skilled team</li>
-                <li>• Budget-flexible packages</li>
-                <li>• Transparent pricing</li>
-                <li>• Nationwide support</li>
-                <li>• Long-lasting components</li>
-                <li>• Emphasis on education</li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Meet Our Team
-            </h2>
-          </div>
-
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-4xl">👨‍💼</span>
-                  </div>
-                </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
-                    Temiloluwa Ibukunoluwa Ojo
-                  </h3>
-                  <p className="text-primary font-semibold mb-4">Lead Engineer & Founder</p>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Temiloluwa is a seasoned energy professional with a BSc and MSc in Petroleum Engineering and over 8 years of experience in the energy sector. With a deep passion for clean energy and sustainable development, he founded TIEM ENERGY to provide reliable solar power solutions for Nigerians.
-                  </p>
-                  <blockquote className="text-primary italic border-l-4 border-primary pl-4">
-                    "At TIEM ENERGY, we're not just installing solar panels — we're building energy independence for Nigerian homes and businesses."
-                  </blockquote>
-                </div>
+            <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
+              <span className="text-primary">📊</span>
+              Strategic Business Info
+            </h2>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">5-Year Goal</h3>
+                <p className="text-muted-foreground">Expand to 5 Nigerian states, power 50,000+ sites, reduce grid dependency by 10%.</p>
               </div>
-            </Card>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Target Audience</h3>
+                <p className="text-muted-foreground">Ages 25–60, homeowners, SMEs, corporates, NGOs.</p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">USP</h3>
+                <p className="text-muted-foreground">Tailored solar inverter systems with expert installation & support.</p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Advantages</h3>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-muted-foreground">
+                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Skilled team</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Budget-flexible packages</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Transparent pricing</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Nationwide support</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Long-lasting components</li>
+                  <li className="flex items-center gap-2"><span className="text-primary">✓</span> Emphasis on education</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Get in Touch & CTA */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8">✅ Get in Touch</h2>
-          <h3 className="text-2xl font-bold mb-8">Ready to Switch to Solar Energy?</h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <a href="/products">See Packages</a>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <a href="tel:+2348063840230">Speak to a Consultant</a>
-            </Button>
+      {/* Get in Touch */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Get in Touch</h2>
+            <p className="text-muted-foreground mb-8">
+              Have questions about our solar solutions? We're here to help you make the switch to clean energy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <a href="tel:+2348063840230">📞 Call Now</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Ready to Switch to Solar Energy?
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Get a free consultation and customized quote for your home or business. Our experts will design the perfect solar solution for your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <a href="/products">See Packages</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="tel:+2348063840230">Speak to a Consultant</a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
