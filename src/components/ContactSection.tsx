@@ -155,7 +155,7 @@ const ContactSection = () => {
                 <p className="text-muted-foreground mb-4">We respond to all inquiries within minutes during business hours and provide free consultations for all potential customers.</p>
                 <div className="flex gap-3">
                   <Button size="sm" asChild>
-                    <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer">💬 WhatsApp Now</a>
+                    <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer">WhatsApp Now</a>
                   </Button>
                   <Button size="sm" variant="outline" asChild>
                     <a href="tel:+2348063840230">Call Now</a>
