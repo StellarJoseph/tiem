@@ -16,9 +16,9 @@ const AboutUsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center mb-16">
-          <div className="space-y-8">
+          <div className="space-y-8 text-center">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
                 <span className="text-primary">🏢</span>
                 Who We Are
               </h3>
@@ -28,7 +28,7 @@ const AboutUsSection = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
                 <span className="text-primary">👥</span>
                 Who We Serve
               </h3>
@@ -38,28 +38,28 @@ const AboutUsSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
                 <span className="text-primary">⭐</span>
                 Benefits of Patronizing Us
               </h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-3">
+              <ul className="space-y-3 text-muted-foreground max-w-2xl mx-auto">
+                <li className="flex items-start justify-center gap-3">
                   <span className="text-primary mt-1">✓</span>
                   High-quality, durable solar products guaranteed to perform in Nigerian conditions
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start justify-center gap-3">
                   <span className="text-primary mt-1">✓</span>
                   Personalized solar solutions to match your energy needs
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start justify-center gap-3">
                   <span className="text-primary mt-1">✓</span>
                   Professional installation & dependable after-sales support
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start justify-center gap-3">
                   <span className="text-primary mt-1">✓</span>
                   Competitive pricing with no compromise on service
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start justify-center gap-3">
                   <span className="text-primary mt-1">✓</span>
                   Trusted by hundreds of customers across Nigeria
                 </li>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -129,7 +128,8 @@ const Services = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              🛠 OUR BENEFITS — Why Choose TIEM ENERGY
+              OUR BENEFITS<br />
+              <span className="text-2xl font-normal">— Why Choose TIEM ENERGY</span>
             </h2>
           </div>
 
@@ -158,7 +158,7 @@ const Services = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              🔄 HOW WE WORK — Proven Solar Delivery Process
+              HOW WE WORK — Proven Solar Delivery Process
             </h2>
           </div>
 

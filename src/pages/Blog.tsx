@@ -100,7 +100,7 @@ const Blog = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Solar Energy Blog</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Blog & News</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Expert insights, guides, and latest updates on solar energy in Nigeria
           </p>
