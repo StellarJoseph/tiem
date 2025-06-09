@@ -1,111 +1,72 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import ContactSection from '@/components/ContactSection';
 
 const Services = () => {
-  const benefits = [
-    {
-      icon: '💰',
-      title: 'Affordable Plans',
-      description: 'Flexible options for every budget'
-    },
-    {
-      icon: '🧠',
-      title: 'Expert Consultation',
-      description: 'Get the right system for your specific needs'
-    },
-    {
-      icon: '🔧',
-      title: 'Professional Installation',
-      description: 'No-hassle setup with certified technicians'
-    },
-    {
-      icon: '🌍',
-      title: 'Nationwide Reach',
-      description: 'Serving clients across Nigeria'
-    },
-    {
-      icon: '🔋',
-      title: 'Durable Components',
-      description: 'Long-lasting, tested solar hardware'
-    },
-    {
-      icon: '📞',
-      title: 'Ongoing Support',
-      description: "We're here long after installation"
-    }
-  ];
-
-  const workProcess = [
-    {
-      step: 1,
-      title: 'Consultation',
-      description: 'We understand your needs'
-    },
-    {
-      step: 2,
-      title: 'Site Assessment',
-      description: 'On-site inspection and load estimation'
-    },
-    {
-      step: 3,
-      title: 'System Design',
-      description: 'Tailored solution planning'
-    },
-    {
-      step: 4,
-      title: 'Installation',
-      description: 'Expert installation with top-grade components'
-    },
-    {
-      step: 5,
-      title: 'Testing',
-      description: 'System test and quality assurance'
-    },
-    {
-      step: 6,
-      title: 'Support',
-      description: 'Ongoing customer care and maintenance'
-    }
-  ];
-
   const services = [
     {
-      icon: '🔋',
-      title: 'Sales & Supply of Premium Solar Equipment and Accessories',
-      description: 'Comprehensive product list including:',
-      items: [
-        'Solar Panels, Inverters (Standard & Hybrid), MPPT Controllers, All-in-One Systems',
-        'Batteries (LiFePO₄ and Tubular), UPS Systems, Power Gateways',
-        'Solar Street Lights, Monitoring Devices, Mounting Kits, Accessories'
-      ]
+      title: 'Consultation',
+      description: 'Free solar energy needs assessment',
+      price: 'Free',
+      features: [
+        'Site evaluation',
+        'Energy consumption analysis',
+        'Custom system design',
+        'ROI calculation'
+      ],
+      popular: false
     },
     {
-      icon: '🔍',
-      title: 'Site Survey & Energy Audit',
-      description: 'Detailed on-site inspections and energy needs assessment by experienced engineers.',
-      items: []
+      title: 'Installation',
+      description: 'Professional solar system installation',
+      price: 'From ₦500,000',
+      features: [
+        'Expert installation team',
+        'Quality components',
+        'Safety compliance',
+        'System testing'
+      ],
+      popular: true
     },
     {
-      icon: '🏠',
-      title: 'Complete Energy Transition for Homes & Businesses',
-      description: 'Fully customized, scalable solar power solutions for residential and commercial clients.',
-      items: []
+      title: 'Maintenance',
+      description: 'Ongoing system maintenance and support',
+      price: 'From ₦50,000/year',
+      features: [
+        'Regular system checks',
+        'Performance monitoring',
+        'Cleaning services',
+        '24/7 support'
+      ],
+      popular: false
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '1',
+      title: 'Initial Consultation',
+      description: 'We assess your energy needs and site conditions'
     },
     {
-      icon: '🛠',
-      title: 'Installation & Maintenance Services',
-      description: 'Full system setup, load management, performance optimization, and post-installation care.',
-      items: []
+      step: '2',
+      title: 'System Design',
+      description: 'Custom solar solution designed for your requirements'
     },
     {
-      icon: '💡',
-      title: 'Free Energy Consultation',
-      description: 'Complimentary expert advice to help you choose the right system for your power needs.',
-      items: []
+      step: '3',
+      title: 'Installation',
+      description: 'Professional installation by certified technicians'
+    },
+    {
+      step: '4',
+      title: 'Monitoring & Support',
+      description: 'Ongoing maintenance and performance monitoring'
     }
   ];
 
@@ -116,15 +77,64 @@ const Services = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Our Services</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Our Solar Services</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Comprehensive solar energy solutions tailored for Nigerian homes and businesses
+            Comprehensive solar energy solutions from consultation to maintenance
           </p>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Service Offerings */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Our Service Offerings
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Complete solar energy solutions tailored to your needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {services.map((service, index) => (
+              <Card key={index} className={`relative hover:shadow-xl transition-all duration-300 ${service.popular ? 'border-primary border-2' : ''}`}>
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-primary text-primary-foreground">Most Popular</Badge>
+                  </div>
+                )}
+                
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl font-bold text-foreground">{service.title}</CardTitle>
+                  <CardDescription className="text-muted-foreground">{service.description}</CardDescription>
+                  <div className="text-3xl font-bold text-primary mt-4">{service.price}</div>
+                </CardHeader>
+
+                <CardContent className="text-center">
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center justify-center gap-2">
+                        <span className="text-primary">✓</span>
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button className="w-full" variant={service.popular ? "default" : "outline"} asChild>
+                    <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer">
+                      Get Started
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -133,28 +143,36 @@ const Services = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <CardTitle className="text-xl font-bold text-foreground">
-                    {benefit.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {benefit.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center p-6">
+              <CardContent className="pt-6">
+                <div className="text-4xl mb-4">⚡</div>
+                <h4 className="text-xl font-bold text-foreground mb-2">Quality Equipment</h4>
+                <p className="text-muted-foreground">Premium solar components with international certifications</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6">
+              <CardContent className="pt-6">
+                <div className="text-4xl mb-4">🛠️</div>
+                <h4 className="text-xl font-bold text-foreground mb-2">Expert Installation</h4>
+                <p className="text-muted-foreground">Certified technicians with years of experience</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6">
+              <CardContent className="pt-6">
+                <div className="text-4xl mb-4">💰</div>
+                <h4 className="text-xl font-bold text-foreground mb-2">Cost Savings</h4>
+                <p className="text-muted-foreground">Reduce electricity bills by up to 90%</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* How We Work */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -162,57 +180,16 @@ const Services = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {workProcess.map((process, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold">
-                    {process.step}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+                    {step.step}
                   </div>
-                  <CardTitle className="text-xl font-bold text-foreground">
-                    {process.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {process.description}
-                  </CardDescription>
+                  <h4 className="text-lg font-bold text-foreground mb-2">{step.title}</h4>
+                  <p className="text-muted-foreground text-sm">{step.description}</p>
                 </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Services */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Our Service Offerings
-            </h2>
-          </div>
-
-          <div className="space-y-8">
-            {services.map((service, index) => (
-              <Card key={index} className="p-8">
-                <div className="flex items-start gap-6">
-                  <div className="text-4xl">{service.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">{service.title}</h3>
-                    <p className="text-muted-foreground mb-4">{service.description}</p>
-                    {service.items.length > 0 && (
-                      <ul className="space-y-2 text-muted-foreground">
-                        {service.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-start gap-2">
-                            <span className="text-primary mt-1">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </div>
               </Card>
             ))}
           </div>
@@ -223,14 +200,17 @@ const Services = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">Ready to Switch to Solar Energy?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Join our growing list of satisfied customers and start your solar journey today
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
               <a href="/products">See Packages</a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary" asChild>
               <a href="tel:+2348063840230">Speak to a Consultant</a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary" asChild>
               <a href="https://wa.me/2348063840230" target="_blank" rel="noopener noreferrer">
                 WhatsApp Us
               </a>

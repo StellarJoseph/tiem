@@ -6,68 +6,86 @@ const AboutUsSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="inline-block bg-accent/10 px-4 py-2 rounded-full mb-4">
+            <span className="text-sm font-medium" style={{ color: '#ffd901' }}>Our Client Reviews</span>
+          </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            About TIEM Energy
+            What People <span style={{ color: '#d20500' }}>Say About</span> <span style={{ color: '#ffd901' }}>TIEM Energy</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Empowering a sustainable future with reliable solar energy solutions in Nigeria
+            Real testimonials from satisfied customers across Nigeria who trust TIEM Energy for their solar solutions
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center mb-16">
-          <div className="space-y-8 text-center">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
-                <span className="text-primary">🏢</span>
-                Who We Are
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                TIEM Energy is a leading solar solutions provider dedicated to delivering clean, affordable, and reliable energy across Nigeria. With years of experience, we design and install customized solar systems tailored to meet diverse energy needs.
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-primary/20 relative">
+            <CardContent className="pt-6">
+              <div className="mb-6">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center text-2xl">
+                  👨‍💼
+                </div>
+                <div className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ backgroundColor: '#d20500' }}>
+                  99
+                </div>
+              </div>
+              <h4 className="text-lg font-bold text-foreground mb-2">Sunkanmi Adedeji</h4>
+              <p className="text-sm text-muted-foreground mb-4">Factory Manager, Shomolu</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                "We installed a 20KW system for our textile customization factory. The quality of hardware and technical support from TIEM Energy is outstanding."
               </p>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
-                <span className="text-primary">👥</span>
-                Who We Serve
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                We proudly serve homeowners, businesses, schools, and communities looking to reduce energy costs and embrace sustainable power solutions in both urban and remote areas of Nigeria.
-              </p>
-            </div>
+              <div className="flex justify-center text-accent text-sm">
+                {'★'.repeat(5)}
+              </div>
+            </CardContent>
+          </Card>
 
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
-                <span className="text-primary">⭐</span>
-                Benefits of Patronizing Us
-              </h3>
-              <ul className="space-y-3 text-muted-foreground max-w-2xl mx-auto">
-                <li className="flex items-start justify-center gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  High-quality, durable solar products guaranteed to perform in Nigerian conditions
-                </li>
-                <li className="flex items-start justify-center gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  Personalized solar solutions to match your energy needs
-                </li>
-                <li className="flex items-start justify-center gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  Professional installation & dependable after-sales support
-                </li>
-                <li className="flex items-start justify-center gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  Competitive pricing with no compromise on service
-                </li>
-                <li className="flex items-start justify-center gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  Trusted by hundreds of customers across Nigeria
-                </li>
-              </ul>
-            </div>
-          </div>
+          <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-primary/20 relative">
+            <CardContent className="pt-6">
+              <div className="mb-6">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center text-2xl">
+                  👩‍⚕️
+                </div>
+                <div className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ backgroundColor: '#d20500' }}>
+                  99
+                </div>
+              </div>
+              <h4 className="text-lg font-bold text-foreground mb-2">Dr. Folake Adeyemi</h4>
+              <p className="text-sm text-muted-foreground mb-4">Medical Practitioner, Ibadan</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                "As a medical practitioner, reliable power is crucial for my practice. TIEM Energy provided a customized solution that meets all our medical equipment needs."
+              </p>
+              <div className="flex justify-center text-accent text-sm">
+                {'★'.repeat(5)}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-primary/20 relative">
+            <CardContent className="pt-6">
+              <div className="mb-6">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center text-2xl">
+                  👨‍💼
+                </div>
+                <div className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ backgroundColor: '#d20500' }}>
+                  99
+                </div>
+              </div>
+              <h4 className="text-lg font-bold text-foreground mb-2">Adebayo Ogundimu</h4>
+              <p className="text-sm text-muted-foreground mb-4">Small Business Owner, Lagos</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                "TIEM Energy installed a 5KW system for my shop. My electricity bills dropped by 80% and the system works perfectly even during harmattan season."
+              </p>
+              <div className="flex justify-center text-accent text-sm">
+                {'★'.repeat(5)}
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
+        {/* Company Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-primary/20">
             <CardContent className="pt-6">
