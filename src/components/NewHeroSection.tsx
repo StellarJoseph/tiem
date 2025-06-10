@@ -9,7 +9,7 @@ const NewHeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/a0f3da5c-2295-4f07-82cf-7f79ac41b702.png')`
+          backgroundImage: `url('/lovable-uploads/46921667-e72c-478b-836b-a6b70f717c00.png')`
         }}
       ></div>
       
