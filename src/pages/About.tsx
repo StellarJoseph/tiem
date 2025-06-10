@@ -3,8 +3,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
 const About = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
@@ -55,8 +57,44 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Installation Images */}
       <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Our Expert Team in Action</h2>
+              <p className="text-muted-foreground">Professional installation services across Nigeria</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-muted rounded-lg h-64 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-4xl mb-2">⚡</div>
+                  <p className="text-muted-foreground">[Installation Team Photo]</p>
+                  <p className="text-sm text-muted-foreground">Solar Panel Installation</p>
+                </div>
+              </div>
+              <div className="bg-muted rounded-lg h-64 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-4xl mb-2">🔋</div>
+                  <p className="text-muted-foreground">[Battery Setup Photo]</p>
+                  <p className="text-sm text-muted-foreground">Battery System Setup</p>
+                </div>
+              </div>
+              <div className="bg-muted rounded-lg h-64 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-4xl mb-2">🏠</div>
+                  <p className="text-muted-foreground">[Residential Installation]</p>
+                  <p className="text-sm text-muted-foreground">Complete Home Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-[#d20500] text-white p-8 rounded-lg">
@@ -87,7 +125,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -95,6 +133,7 @@ const About = () => {
               <div className="h-1 w-24 bg-primary mx-auto"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
               <Card className="border-2 hover:border-primary/20 transition-all h-full">
                 <CardContent className="pt-6">
                   <h4 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
@@ -165,8 +204,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Strategic Business Info */}
-      <section className="py-16 bg-background">
+      
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -219,7 +258,7 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* USP */}
-              <div className="bg-muted/30 p-8 rounded-lg">
+              <div className="bg-background p-8 rounded-lg border">
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
                     <span className="text-2xl">💡</span> Unique Selling Proposition (USP)
@@ -231,7 +270,7 @@ const About = () => {
               </div>
 
               {/* Key Advantages */}
-              <div className="bg-muted/30 p-8 rounded-lg">
+              <div className="bg-background p-8 rounded-lg border">
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2 flex items-center gap-3">
                     <span className="text-2xl">🛠</span> Key Advantages
@@ -277,6 +316,8 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default About;
